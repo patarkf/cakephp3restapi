@@ -1,0 +1,69 @@
+{
+    "name":"friendsofcake/crud",
+    "description":"CakePHP Application development on steroids - rapid prototyping / scaffolding & production ready code - XML / JSON APIs and more",
+    "type":"cakephp-plugin",
+    "keywords":[
+        "cakephp",
+        "crud",
+        "create",
+        "retrieve",
+        "update",
+        "delete",
+        "bake",
+        "cake",
+        "scaffold",
+        "scaffolding"
+    ],
+    "homepage":"https://github.com/FriendsOfCake/crud",
+    "license":"MIT",
+    "authors":[
+        {
+            "name":"Christian Winther",
+            "role":"Author",
+            "homepage":"http://cakephp.nu/"
+        },
+        {
+            "name":"José Lorenzo Rodríguez",
+            "role":"Contributor",
+            "homepage":"https://github.com/lorenzo"
+        },
+        {
+            "name":"Andy Dawson",
+            "role":"Contributor",
+            "homepage":"https://github.com/ad7six"
+        },
+        {
+            "name":"ADmad",
+            "role":"Contributor",
+            "homepage":"https://github.com/admad"
+        }
+    ],
+    "require":{
+        "cakephp/cakephp": "~3.1"
+    },
+    "require-dev": {
+        "friendsofcake/cakephp-test-utilities": "dev-master",
+        "friendsofcake/search": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Crud\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Crud\\Test\\": "tests",
+            "Cake\\Test\\Fixture\\": "./vendor/cakephp/cakephp/tests/Fixture"
+        }
+    },
+    "suggest": {
+        "friendsofcake/search": "Provides search capabilities for the Crud plugin.",
+        "friendsofcake/crud-view": "Automated admin backend based on your Crud configuration."
+    },
+    "support":{
+        "source":"https://github.com/FriendsOfCake/crud",
+        "issues":"https://github.com/FriendsOfCake/crud/issues",
+        "wiki":"http://crud.readthedocs.org/en/latest/",
+        "irc":"irc://irc.freenode.org/friendsofcake"
+    }
+}

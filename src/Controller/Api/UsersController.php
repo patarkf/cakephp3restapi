@@ -4,6 +4,7 @@ namespace App\Controller\Api;
 use App\Controller\Api\AppController;
 use Cake\Event\Event;
 use Cake\Utility\Security;
+use Firebase\JWT\JWT;
 
 class UsersController extends AppController
 {
@@ -19,7 +20,7 @@ class UsersController extends AppController
             if ($event->subject->created) {
                 $this->set('data', [
                     'id' => $event->subject->entity->id,
-                    'token' => $token = \JWT::encode(
+                    'token' => $token = \Firebase\JWT\JWT::encode(
                         [
                             'id' => $event->subject->entity->id,
                             'exp' => time() + 604800,
@@ -42,7 +43,7 @@ class UsersController extends AppController
         $this->set([
             'success' => true,
             'data' => [
-                'token' => $token = \JWT::encode([
+                'token' => $token = \Firebase\JWT\JWT::encode([
                     'id' => $user['id'],
                     'exp' => time() + 604800,
                 ],
